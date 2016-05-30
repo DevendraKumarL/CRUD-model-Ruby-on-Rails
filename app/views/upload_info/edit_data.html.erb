@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+		<div class="nav-links">
+			<% if @user %>
+				<a class="nav-links-href" style="font-size: 20px;" >Welcome, <%= @user.username %></a>
+				<a class="nav-links-href" href="/register_login/logout_user">Logout</a>
+			<% else %>
+				<a class="nav-links-href" href="/register/new_user">Register</a>
+				<a class="nav-links-href" href="/login/login_user">Login</a>
+			<% end %>
+		</div>
+	</div><br>
+	<div class="view-data" style="margin-top: 58px;">
+		<center><h1>Edit this data</h1></center>
+		<form method="post" action="/edit/info/update">
+			<input type="hidden" name="update_id" value="<%= @this_data.id %>"></input>
+			<b>Shop Name:</b><input type="text" class="custom-input-field-css" name="shopname" value="<%= @this_data.shopName %>"></input>
+			<b>Offers :</b><input type="text" class="custom-input-field-css" name="offer" value="<%= @this_data.offers %>"></input>
+			<b>Starting Price :</b><input type="number" class="custom-input-field-css" min="0" name="startingPrice" value="<%= @this_data.startingPrice %>"></input>
+			<b>End Date</b><input type="date" class="custom-input-field-css" min="2016-04-16" name="endDate" value="<%= @this_data.endDate %>"></input>
+			<input type="submit" class="custom-button" value="Update"></input>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+		<div class="nav-links">
+			<% if @user %>
+				<a class="nav-links-href" style="font-size: 20px;" >Welcome, <%= @user.username %></a>
+				<a class="nav-links-href" href="/register_login/logout_user">Logout</a>
+			<% else %>
+				<a class="nav-links-href" href="/register/new_user">Register</a>
+				<a class="nav-links-href" href="/login/login_user">Login</a>
+			<% end %>
+		</div>
+	</div><br>
+	<div class="view-data" style="margin-top: 58px;">
+		<center><h1>All Your Uploaded  data</h1></center>
+		<% @user_data.each do |data| %>
+		<div class="single-data-view">
+			<div>Shop Name:<b> <%= data.shopName %></b><br>
+			Offer: <b><%= data.offers %></b><br>
+			Starting Price: <b><%= data.startingPrice %></b><br>
+			End Date: <b><%= data.endDate %></b><br></div>
+			<center><b><%= link_to "Edit", editThisData_path(data.id), :class => "href" %>
+			<%= link_to "Delete", deleteThisData_path(data.id), :class => "href" %></b></center>
+		</div>
+		<% end %>
+	</div>
+</body>
+</html>

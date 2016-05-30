@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+		<div class="nav-links">
+			<% if @user %>
+				<a class="nav-links-href" style="font-size: 20px;" >Welcome, <%= @user.username %></a>
+				<a class="nav-links-href" href="/register_login/logout_user">Logout</a>
+			<% else %>
+				<a class="nav-links-href" href="/register/new_user">Register</a>
+				<a class="nav-links-href" href="/login/login_user">Login</a>
+			<% end %>
+		</div>
+	</div><br>
+	<div class="register" style="margin-top: 58px;">
+		<center><h1>Fill The form</h1></center>
+		<form method="post" action="/upload/submit_info">
+			<input type="text" autofocus class="custom-input-field-css" placeholder="Shop Name" name="shopname" required></input>
+			<input type="text" class="custom-input-field-css" placeholder="Offer" name="offer" required></input>
+			<input type="number" class="custom-input-field-css" min="0" placeholder="Starting Price" name="startingPrice" required></input>
+			<input type="date" class="custom-input-field-css" placeholder="End Date" min="2016-04-16" name="endDate" required></input>
+			<input type="submit"class="custom-button"  value="Upload"></input>
+		</form>
+	</div>
+</body>
+</html>

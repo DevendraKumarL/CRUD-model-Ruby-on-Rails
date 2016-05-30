@@ -1,0 +1,2 @@
+module UploadInfoHelper
+end

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+	</div><br>
+
+	<div class="register" style="margin-top: 58px;">
+		<center><h1>Register</h1></center>
+		<form method="post" action="/register/create_user">
+			<input type="text" class="custom-input-field-css" autofocus placeholder="User Name" name="username" required></input>
+			<input type="email" class="custom-input-field-css" placeholder="Email" name="email" required></input>
+			<input type="password" class="custom-input-field-css" placeholder="Password" name="password" required></input>
+			<input type="password" class="custom-input-field-css" placeholder="Confirm Password" name="password2" required></input>
+			<input type="submit" class="custom-button" value="Register"></input>
+		</form>
+	</div>
+</body>
+</html>

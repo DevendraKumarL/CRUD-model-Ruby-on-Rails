@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">		
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+	</div><br>
+
+	<div class="Main" style="margin-top: 58px;">
+		<center><h1>Task - II</h1></center>
+		<center>
+			<a href="/products/view_all" ><button >View All products</button></a><br>
+	<!-- 		<a href="/login/login_user" ><button >Search by Tag</button></a> -->
+			<a class="tag-show"><button>Search By #Tag</button></a>
+		</center>
+
+	</div><br>
+	<div class="tags" id="tags">
+		<br>
+		<form method="get" action="/products/tag_find">
+		<center>
+			<b>Choose Tag: </b>
+			<select class="drop-down" name="tag">
+				<% @all_tags.each do |tag| %>
+				<option><%= tag.tag_name %></option>
+				<% end %>
+			</select>
+
+		</center>
+		<input type="submit" class="custom-button" value="Search"></input>
+		</form>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".tag-show").click(function() {
+            $("#tags").slideToggle("slow");
+        });
+    });
+</script>
+
+<style type="text/css">
+    #tags {
+        display: none;
+    }
+    .tags {
+        border: 1px solid #fff;
+        width: 500px;
+        height: 200px;
+        margin: auto;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+
+    }
+</style>

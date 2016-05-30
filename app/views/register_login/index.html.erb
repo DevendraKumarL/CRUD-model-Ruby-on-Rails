@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+		<div class="nav-links">
+			<% if @user %>
+				<a class="nav-links-href" style="font-size: 20px;" >Welcome, <%= @user.username %></a>
+				<a class="nav-links-href" href="/register_login/logout_user">Logout</a>
+			<% else %>
+				<a class="nav-links-href" href="/register/new_user">Register | </a>
+				<a class="nav-links-href" href="/login/login_user">Login</a>
+			<% end %>
+		</div>
+	</div><br>
+
+<center><h1 style="margin-top: 58px;">Welcome! Let's get Started</h1></center>
+	<div class="Main"	>
+	
+		<% if @user %>
+		<center><h1>Do Your Stuff</h1>
+		<h1>Task - I</h1></center>
+			<!-- <a href="/upload/info" style="margin-left: 190px; "><button>Upload Data</button></a> -->
+			<center><%= link_to "Upload", uploadThisUserData_path(@user.id), :class => "custom-link-css" %></center>
+			<center><%= link_to "View", viewThisUserData_path(@user.id), :class => "custom-link-css" %></center>
+			
+			
+		<% else %>
+		<center>
+		<h1>Task - I</h1>
+			<a href="/register/new_user" ><button >Register</button></a><br>
+			<a href="/login/login_user" ><button >Login</button></a></center>
+		<% end %>
+	</div><br>
+	<div class="Main-2">
+		<center><h1>Task - II</h1>
+		<a href="/products/page"><button>View Products Page</button></a><br></center>
+	</div>
+</body>
+</html>

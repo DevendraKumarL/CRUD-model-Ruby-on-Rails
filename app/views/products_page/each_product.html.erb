@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+	</div><br>
+	<div class="notify-red">
+		Go Back & Refresh the page to see the ratings change
+	</div>
+	<div class="tag-result">
+		<center><h1>Product Info</h1></center>
+			<div class="main-full-product">
+			<center>
+				<h2><%= @product.product_name %></h2>
+				<img src="<%= @product.image %>" class="product-image"><br><br>
+				<b>Info : </b><p class="product-info"><%= @product.info %></p>
+				<h3 ><b>Price : &#x20B9;</b><%= @product.price %></h3>
+				<h3 ><b>Tag : </b>#<%= @tag.tag_name %></h3>
+				<h2 style="color: red;"><b>Rating : </b><%= @product.rating %>(updated just now)</h2>
+				</center>
+			</div>
+	</div><br>
+
+
+</body>
+</html>

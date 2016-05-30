@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task</title>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Slab' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>	
+</head>
+<body>
+	<div class="navbar">
+		<div class="navbar-header">
+			<a href="/register_login/index" class="navbar-header-link">Task</a>
+		</div>
+	</div><br>
+	<div class="notify-green">
+		Refresh the page to see the ratings change
+	</div>
+	<div class="tag-result">
+		<center><h2>Tag Result </h2><h1>#<%= @tag_name %></h1></center>
+		<% if @products.size == 0 %>
+			<center><h3>Sorry :( no products under this tag yet</h3></center>
+		<% else %>
+			<% @products.each do |product| %>
+			<div class="each-product">
+			<center>
+				<b>Procut Name: </b><h2><%= product.product_name %></h2>
+				<img src="<%= product.image %>" class="product-image"><br>
+				<b>Tag : #<%= @tag_name %></b><br>
+				<b>Price : &#x20B9;<%= product.price %></b>
+				<h3><b>Rating : </b><%= product.rating %></h3>
+				<%= link_to "View", product_path(product.id), :class => "custom-view-link" %>
+				</center>
+			</div>
+			<% end %>
+		<% end %>
+	</div><br>
+
+
+</body>
+</html>

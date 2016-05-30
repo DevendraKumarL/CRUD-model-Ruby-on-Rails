@@ -1,0 +1,234 @@
+.navbar {
+	width: 100%;
+	height: 58px;
+	background-color: #f2b632;
+	border: 1px solid #fff;
+	position: fixed;
+}
+
+.navbar-header {
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 200px;
+	float: left;
+}
+
+.navbar-header-link {
+	text-decoration: none;
+	font-size: 35px;
+	color: black;
+}
+
+.navbar-header-link:hover {
+	color: #b5b5b7;
+}
+
+.nav-links {
+	float: right;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 320px;
+}
+
+.nav-links-href {
+	text-decoration: none;
+	font-size: 30px;
+	color: black;
+}
+
+.nav-links-href:hover {
+	color: #b5b5b7;
+}
+
+.Main{
+	margin: auto;
+	width: 500px;
+	border: 1px solid #fff;
+}
+
+.register {
+	margin: auto;
+	border: 1px solid #fff;
+	width: 500px;
+}
+
+.view-data {
+	border: 1px solid #fff;
+	margin: auto;
+	width: 500px;
+}
+
+.single-data-view {
+	margin-left: 50px;
+	margin-right: 50px;
+	border: 1px solid #fff;
+	margin-bottom: 20px;
+}
+
+input {
+	display: block;
+	margin: auto;
+}
+
+a, .href {
+	text-decoration: none;
+	color: white;
+	font-family: 'Josefin Slab', serif;
+	font-size: 25px;
+}
+a:hover, .href:hover {
+	color: #f2b632;
+}
+
+body {
+	background-color: #252839;
+	color: white;
+	font-family: 'Josefin Slab', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Josefin Slab', serif;
+}
+
+button {
+	width: 265px;
+	height: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Josefin Slab', serif;
+	font-size: 28px;
+	background-color: #f2b632;
+}
+
+button:hover {
+	background-color: #252839;
+	color: white;
+	cursor: pointer;
+}
+
+.custom-button {
+		width: 265px;
+	height: 35px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-family: 'Josefin Slab', serif;
+	font-size: 28px;
+	background-color: #f2b632;
+}
+
+.custom-button:hover {
+	background-color: #252839;
+	color: white;
+	cursor: pointer;
+}
+
+.custom-input-field-css {
+	width: 235px;
+	height: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: 'Josefin Slab', serif;
+	font-size: 23px;
+}
+
+.custom-input-field-css:hover {
+	border: 2px solid #f2b632;
+}
+
+.single-data-view div {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.flash-notice {
+	border: 1px solid #fff;
+	width: 100%;
+	height: 30px;
+	background-color: red;
+	font-color: white;
+}
+
+.Main-2 {
+	margin: auto;
+	width: 500px;
+	border: 1px solid #fff;	
+}
+
+.each-product {
+	border: 1px solid #fff;
+	width: 285px;
+	height: 400px;
+	margin: 10px;
+	float: left;
+}
+
+.tag-result {
+	border: 1px solid #fff;
+	width: 900px;
+	height: auto;
+	margin: auto;
+}
+
+.product-image {
+	width: 210px;
+	height: 200px;
+}
+
+.main-full-product {
+
+}
+
+.product-info {
+	font-weight: bold;
+	font-size: 30px;
+	border: 1px solid #fff;
+	width: 400px;
+}
+
+.drop-down{
+	width: 170px;
+	height: 30px;
+}
+
+.notify-red {
+	width: 400px;
+	background-color: #ff0000;
+	padding: 10px;
+	color: black;
+	margin: 5px;
+	font-weight: bold;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 58px;
+}
+
+.notify-green {
+	width: 400px;
+	background-color: green;
+	padding: 10px;
+	color: black;
+	margin: 5px;
+	font-weight: bold;
+	margin: auto;
+	margin-bottom: 10px;
+	margin-top: 58px;
+	/*position: fixed;*/
+}
+
+.custom-view-link {
+	font-weight: bold;
+	border: 1px solid #fff;
+	padding: 5px;
+	color: black;
+	background-color: #f2b632;
+}
+
+.custom-view-link:hover {
+	background-color: #252839;
+	color: white;
+	cursor: pointer;
+}
