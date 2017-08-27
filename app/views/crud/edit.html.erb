@@ -1,0 +1,8 @@
+<h3>Update Person</h3>
+<%= form_for(@person) do |f| %>
+	<%= f.text_field :firstname %>
+	<%= f.text_field :lastname %>
+	<%= f.number_field :age, :min => '1' %>
+	<%= f.text_area :description, :rows => '5', :cols => '30' %>
+	<%= f.submit 'Update' %>
+<% end %>

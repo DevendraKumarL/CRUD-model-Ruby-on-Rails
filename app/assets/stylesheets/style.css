@@ -67,7 +67,7 @@
 	margin-bottom: 20px;
 }
 
-input {
+input, textarea {
 	display: block;
 	margin: auto;
 }

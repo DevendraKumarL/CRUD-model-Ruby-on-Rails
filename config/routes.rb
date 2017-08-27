@@ -25,7 +25,24 @@ Rails.application.routes.draw do
   get 'products/view_all' => 'products_page#view_all'
 
   # You can have the root of your site routed with "root"
-  root 'register_login#index'
+  # root 'register_login#index'
+  root 'crud#index'
+
+  # resources :persons
+
+  # index page / view all
+  get 'crud/person/index' => 'crud#index', as: :crud_index
+  #  create new person
+  get 'crud/person/new' => 'crud#new', as: :crud_new
+  post 'crud/person' => 'crud#create', as: :people
+  # view a person
+  get 'crud/person/:id' => 'crud#view', as: :crud_view
+  # update a person
+  get 'crud/person/edit/:id' => 'crud#edit', as: :crud_edit
+  patch 'crud/person/:id' => 'crud#update', as: :person
+  #delete a person
+  delete 'crud/person/:id' => 'crud#destroy'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,0 +1,8 @@
+<h3>Create a new Person</h3>
+<%= form_for(@person) do |f| %>
+	<%= f.text_field :firstname, :placeholder => "First Name" %>
+	<%= f.text_field :lastname, :placeholder => "Last Name" %>
+	<%= f.number_field :age, :min => '1', :placeholder => "Age" %>
+	<%= f.text_area :description, :rows => '5', :cols => '30', :placeholder => "Description" %>
+	<%= f.submit 'Create' %>
+<% end %>

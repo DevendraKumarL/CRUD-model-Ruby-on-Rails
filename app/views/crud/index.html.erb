@@ -1,0 +1,36 @@
+<h1>Hello World</h1>
+<p>
+	<%= link_to "Create a new Person", crud_new_path %>
+</p>
+
+<h3>List of People</h3>
+<p>
+	<!-- Iterate from persons :people table -->
+	<li>Total Number of Persons: <%= @people.size %></li><br>
+	<table border="1">
+		<thead>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Age</th>
+			<th>Description</th>
+			<td>View</td>
+			<td>Update</td>
+			<td>Delete</td>
+		</thead>
+		<tbody>
+			<% @people.each do |person| %>
+				<tr>
+					<td><%= person.firstname %></td>
+					<td><%= person.lastname %></td>
+					<td><%= person.age %></td>
+					<td><%= person.description %></td>
+					<td><%= link_to "View", crud_view_path(person.id) %></td>
+					<td><%= link_to "Edit", crud_edit_path(person.id) %></td>
+					<td><%= button_to "Delete", 
+					{:controller => :crud, :action => :destroy, :id => person.id}, :method => :delete%>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</p>
