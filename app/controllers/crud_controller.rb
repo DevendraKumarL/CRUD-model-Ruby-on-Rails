@@ -11,7 +11,7 @@ class CrudController < ApplicationController
 
 	def create
 		@person = Person.new(person_params)
-		if @person.save
+		if @person.save!
 			redirect_to :action => 'index'
 		else
 			render :action => 'new'

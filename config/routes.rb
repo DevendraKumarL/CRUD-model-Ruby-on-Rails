@@ -43,6 +43,10 @@ Rails.application.routes.draw do
   #delete a person
   delete 'crud/person/:id' => 'crud#destroy'
 
+  resources :schools do
+    resources :students
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
